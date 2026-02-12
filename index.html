@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey bby 💕</title>
+  <h1>ENJOY YOUR DAY BBY DAHMII"</h1>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    h1 {
+      position: relative;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ffd1e8, #ffb6d5, #ffe6f2);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Floating hearts & sparkles */
+    .float {
+      position: absolute;
+      animation: floatUp linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: -10%;
+        transform: translateX(0)
+      }
+
+      100% {
+        bottom: 110%;
+        transform: translateX(40px)
+      }
+    }
+
+    .container {
+      text-align: center;
+      z-index: 2;
+      animation: fadeIn 1.6s ease;
+      padding: 20px;
+    }
+
+    /* Dancing Teddy */
+    .teddy {
+      font-size: 100px;
+      margin-bottom: 15px;
+      animation: teddyDance 1.8s infinite ease-in-out;
+      filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.25));
+    }
+
+    @keyframes teddyDance {
+      0% {
+        transform: rotate(0deg) translateY(0)
+      }
+
+      20% {
+        transform: rotate(6deg) translateY(-6px)
+      }
+
+      40% {
+        transform: rotate(0deg) translateY(0)
+      }
+
+      60% {
+        transform: rotate(-6deg) translateY(-6px)
+      }
+
+      80% {
+        transform: rotate(0deg) translateY(0)
+      }
+
+      100% {
+        transform: rotate(0deg) translateY(0)
+      }
+    }
+
+    /* Text */
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.3rem;
+      color: #b0124d;
+      margin-bottom: 10px;
+      text-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #7a0d35;
+      margin-bottom: 35px;
+    }
+
+    /* Button */
+    button {
+      padding: 16px 48px;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(45deg, #ff2f6d, #ff7aa2);
+      color: white;
+      font-size: 1.15rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+      transition: 0.4s;
+    }
+
+    button:hover {
+      transform: scale(1.12);
+    }
+
+    /* Fade */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Cute Dancing Teddy -->
+    <div class="teddy">🧸</div>
+
+    <h1>Hey Darling 💕</h1>
+    <p>Do you know how cute you are?</p>
+
+    <button onclick="location.href='cuteness.html'">
+      Open My Heart 💝
+    </button>
+  </div>
+
+  <script>
+    // Floating hearts & sparkles
+    const icons = ["💖", "✨", "💗", "🌸"];
+    for (let i = 0; i < 26; i++) {
+      let el = document.createElement("div");
+      el.className = "float";
+      el.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.fontSize = (18 + Math.random() * 14) + "px";
+      el.style.animationDuration = (6 + Math.random() * 5) + "s";
+      document.body.appendChild(el);
+    }
+  </script>
+
+</body>
+
+</html>

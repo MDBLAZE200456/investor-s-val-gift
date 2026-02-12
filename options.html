@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey Beautiful 💕</title>
+  <h1> ENJOY YOUR DAY BBY DAHMII"</h1>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    h1 {
+      color: #b0124d;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ffd1e8, #ffb6d5, #ffe6f2);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Floating hearts */
+    .float {
+      position: absolute;
+      animation: floatUp linear infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: -10%;
+        transform: translateX(0)
+      }
+
+      100% {
+        bottom: 110%;
+        transform: translateX(35px)
+      }
+    }
+
+    .container {
+      text-align: center;
+      z-index: 2;
+      animation: fadeIn 1.5s ease;
+      padding: 20px;
+      max-width: 650px;
+      width: 100%;
+    }
+
+    /* Heading */
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.1rem;
+      color: #b0124d;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #7a0d35;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    /* Teddy */
+    .teddy {
+      font-size: 80px;
+      margin: 10px 0 25px;
+      animation: teddyDance 1.8s infinite ease-in-out;
+    }
+
+    @keyframes teddyDance {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      25% {
+        transform: rotate(5deg) translateY(-5px)
+      }
+
+      50% {
+        transform: rotate(0deg)
+      }
+
+      75% {
+        transform: rotate(-5deg) translateY(-5px)
+      }
+
+      100% {
+        transform: rotate(0deg)
+      }
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 22px 12px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      transition: 0.35s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.05);
+    }
+
+    .word {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #b0124d;
+    }
+
+    .reveal {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #ffb6d5, #ffd1e8);
+      color: #7a0d35;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: 15px;
+      border-radius: 20px;
+      transform: scale(0);
+      transition: 0.35s;
+    }
+
+    .card.active .reveal {
+      transform: scale(1);
+    }
+
+    /* Next Button */
+    .next-btn {
+      margin-top: 35px;
+      padding: 15px 45px;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(45deg, #ff2f6d, #ff7aa2);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3);
+      transition: 0.4s;
+    }
+
+    .next-btn:hover {
+      transform: scale(1.12);
+    }
+
+    /* Fade */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(25px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Hey Beautiful 💕</h1>
+    <div class="subtitle">Tap each one to reveal ✨</div>
+
+    <div class="teddy">🧸</div>
+
+    <div class="cards">
+
+      <div class="card" onclick="toggle(this)">
+        <div class="word">Smile</div>
+        <div class="reveal">Your smile makes everything feel brighter 💖</div>
+      </div>
+
+      <div class="card" onclick="toggle(this)">
+        <div class="word">Eyes</div>
+        <div class="reveal">Your eyes are softly magical ✨</div>
+      </div>
+
+      <div class="card" onclick="toggle(this)">
+        <div class="word">Vibe</div>
+        <div class="reveal">Your vibe feels calm and comforting 🫶</div>
+      </div>
+
+      <div class="card" onclick="toggle(this)">
+        <div class="word">Heart</div>
+        <div class="reveal">Your heart is genuinely beautiful 💗</div>
+      </div>
+
+      <div class="card" onclick="toggle(this)">
+        <div class="word">You</div>
+        <div class="reveal">You are special, just the way you are 💕</div>
+      </div>
+
+    </div>
+
+    <button class="next-btn" onclick="location.href='note.html'">
+      Click Here Cute 💖
+    </button>
+
+  </div>
+
+  <script>
+    // floating hearts
+    const icons = ["💖", "✨", "💗", "🌸"];
+    for (let i = 0; i < 24; i++) {
+      let el = document.createElement("div");
+      el.className = "float";
+      el.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.fontSize = (16 + Math.random() * 14) + "px";
+      el.style.animationDuration = (6 + Math.random() * 5) + "s";
+      document.body.appendChild(el);
+    }
+
+    function toggle(card) {
+      card.classList.toggle("active");
+    }
+  </script>
+
+</body>
+
+</html>
